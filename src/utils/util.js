@@ -1,7 +1,4 @@
 export const checkServer = typeof window === 'undefined';
-
-
-
 // 判断是否webp
 export const checkWebpFeature = () => {
   return new Promise((reslove) => {
@@ -19,8 +16,6 @@ export const checkWebpFeature = () => {
   });
 };
 
-
-
 // 七牛压缩指定宽
 export const getImgGzip = ({
   src,
@@ -28,7 +23,6 @@ export const getImgGzip = ({
   quality = 75,
   iswebp,
 }) => {
-
   let newUrl = src;
   if (!/\?(imageView2|imageMogr2)\//.test(newUrl)) {
     newUrl = `${src}?imageMogr2/quality/${quality}`;
@@ -40,6 +34,5 @@ export const getImgGzip = ({
       newUrl += `/format/webp`;
     }
   }
-
   return newUrl;
 };
