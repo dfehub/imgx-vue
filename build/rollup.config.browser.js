@@ -4,8 +4,8 @@ import uglify from 'rollup-plugin-uglify-es'
 const config = Object.assign({}, base, {
   output: {
     exports: 'named',
-    name: 'VueImgx',
-    file: 'dist/vue-imgx.min.js',
+    name: 'ImgxVue',
+    file: 'dist/imgx-vue.min.js',
     format: 'iife'
   },
 })

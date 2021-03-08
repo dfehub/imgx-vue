@@ -2,8 +2,8 @@ import base from './rollup.config.base'
 
 const config = Object.assign({}, base, {
   output: {
-    name: 'vue-imgx',
-    file: 'dist/vue-imgx.esm.js',
+    name: 'imgx-vue',
+    file: 'dist/imgx-vue.esm.js',
     format: 'es',
   },
 })
