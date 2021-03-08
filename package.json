@@ -1,6 +1,6 @@
 {
-  "name": "vue-imgx",
-  "version": "1.0.0",
+  "name": "imgx-vue",
+  "version": "0.0.1",
   "description": "",
   "main": "dist/vue-imgx.umd.js",
   "module": "dist/vue-imgx.esm.js",
@@ -10,6 +10,7 @@
     "build:browser": "rollup --config build/rollup.config.browser.js",
     "build:es": "rollup --config build/rollup.config.es.js",
     "build:umd": "rollup --config build/rollup.config.umd.js",
+    "prepublish": "npm run build",
     "dev": "cross-env NODE_ENV=development rollup --config build/rollup.config.es.js --watch"
   },
   "keywords": [
@@ -20,7 +21,7 @@
     "template",
     "component"
   ],
-  "author": "blryli",
+  "author": "febase",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.13.8",
