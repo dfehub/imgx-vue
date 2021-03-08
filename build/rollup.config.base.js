@@ -11,14 +11,14 @@ export default {
   input: 'src/index.js',
   plugins: [
     resolve({ extensions: ['.vue'] }),
-    vue({ css: false ,compileTemplate: true }),
+    vue({ css: false ,compileTemplate: false }),
     css({ output(style) {
       // 压缩 css 写入 dist/vue-imgx.css
       writeFileSync('dist/vue-imgx.css', new CleanCSS().minify(style).styles)
     } }),
     // css: false 将<style>块转换为导入语句，rollup-plugin-css-only可以提取.vue文件中的样式
-    babel(),
     commonjs(),
+    babel({exclude: ["node_modules/**"],extensions: ['.js', '.es', '.mjs', '.vue']}),
     terser({ compress: { drop_console: true } })
   ]
 }

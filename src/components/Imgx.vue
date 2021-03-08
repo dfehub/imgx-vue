@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { checkWebpFeature, getImgGzip } from '../utils/util';
+import { checkWebpFeature, getImgGzip } from 'utils/util';
 import LazyLoadImage from './LazyLoadImage'
 let iswebp = false
 const pattern = new RegExp('http(s)?://[^s]*');
@@ -66,7 +66,10 @@ export default {
     async handleImgUrl(){
       const {src,imgHitWidth,quality} = this
       iswebp = await checkWebpFeature();
+      console.log(src,'....')
       const newUrlStr = getImgGzip({ src, width: imgHitWidth, quality, iswebp });
+      console.log(newUrlStr,'...1.')
+
       this.imgUrl = newUrlStr
     },
     onLoad(){
