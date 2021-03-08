@@ -1,7 +1,7 @@
 {
   "name": "imgx-vue",
-  "version": "0.0.2",
-  "description": "",
+  "version": "0.0.3",
+  "description": "imgx",
   "main": "dist/vue-imgx.umd.js",
   "module": "dist/vue-imgx.esm.js",
   "unpkg": "dist/vue-imgx.min.js",
