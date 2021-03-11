@@ -1,7 +1,7 @@
 {
   "name": "imgx-vue",
-  "version": "0.0.3",
-  "description": "imgx",
+  "version": "0.0.4",
+  "description": "image 渐进式加载，支持webp，目前仅支持七牛cdn",
   "main": "dist/imgx-vue.umd.js",
   "module": "dist/imgx-vue.esm.js",
   "unpkg": "dist/imgx-vue.min.js",

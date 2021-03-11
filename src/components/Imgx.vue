@@ -1,6 +1,6 @@
 <template>
   <div :style="{position:'relative',overflow:'hidden',height,width}" >
-    <img :src="handlePlaceholderSrc()" style="display: block;width:100%;height:100%;opacity:1" />
+    <img :src="handlePlaceholderSrc()" style="display:block;width:100%;height:100%;opacity:1" />
     <LazyLoadImage :src='imgUrl' @onLoad="onLoad" :loaded="loaded" :alt="alt"/>
     <div :style="{
       width:'100%',
@@ -110,8 +110,6 @@ export default {
       }
       return newUrlStr || '';
     },
-   
-    
   },
   props: {
     imageLoadType: {type: String,default: 'qiniu'}, // 低清晰图类型，custom自定义, qiniu七牛
