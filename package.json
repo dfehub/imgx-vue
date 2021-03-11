@@ -2,9 +2,9 @@
   "name": "imgx-vue",
   "version": "0.0.3",
   "description": "imgx",
-  "main": "dist/vue-imgx.umd.js",
-  "module": "dist/vue-imgx.esm.js",
-  "unpkg": "dist/vue-imgx.min.js",
+  "main": "dist/imgx-vue.umd.js",
+  "module": "dist/imgx-vue.esm.js",
+  "unpkg": "dist/imgx-vue.min.js",
   "scripts": {
     "build": "npm run build:browser && npm run build:es && npm run build:umd",
     "build:browser": "rollup --config build/rollup.config.browser.js",

@@ -1,6 +1,6 @@
 <template>
   <div :style="{position:'relative',overflow:'hidden',height,width}" >
-    <img :src="handlePlaceholderSrc()" style="display: block;width:100%;opacity:1" />
+    <img :src="handlePlaceholderSrc()" style="display: block;width:100%;height:100%;opacity:1" />
     <LazyLoadImage :src='imgUrl' @onLoad="onLoad" :loaded="loaded" :alt="alt"/>
     <div :style="{
       width:'100%',
@@ -66,10 +66,7 @@ export default {
     async handleImgUrl(){
       const {src,imgHitWidth,quality} = this
       iswebp = await checkWebpFeature();
-      console.log(src,'....')
       const newUrlStr = getImgGzip({ src, width: imgHitWidth, quality, iswebp });
-      console.log(newUrlStr,'...1.')
-
       this.imgUrl = newUrlStr
     },
     onLoad(){
